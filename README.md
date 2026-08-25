@@ -1,3 +1,5 @@
+![Cozy Journal screenshot](Obsidian_theme.png)
+
 # Cozy Journal
 
 A warm, dark journaling theme for Obsidian. Pure black background, warm amber accents, serif reading font, and Notion-style gradient banners no plugins required.
