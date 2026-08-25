@@ -1,0 +1,239 @@
+/* Cozy Journal — full dark warm overhaul for Obsidian */
+
+.theme-dark {
+  --background-primary: #000000;
+  --background-primary-alt: #000000;
+  --background-secondary: #000000;
+  --background-secondary-alt: #000000;
+  --background-modifier-border: #3a322a;
+  --background-modifier-hover: #2a241f;
+  --background-modifier-active-hover: #352c25;
+  --background-modifier-box-shadow: rgba(0,0,0,0.4);
+
+  --text-normal: #ead9c4;
+  --text-muted: #a89684;
+  --text-faint: #6f6255;
+  --text-accent: #e0a458;
+  --text-accent-hover: #f0b96a;
+  --text-error: #d9695f;
+  --text-selection: #4a3826;
+  --text-on-accent: #1e1a17;
+
+  --interactive-normal: #2a241f;
+  --interactive-hover: #352c25;
+  --interactive-accent: #b5732f;
+  --interactive-accent-hover: #cc8340;
+
+  --h1-color: #e6b57c;
+  --h2-color: #dba86d;
+  --h3-color: #cf9c62;
+  --h4-color: #c39058;
+  --h5-color: #b8855a;
+  --h6-color: #a87c52;
+
+  --font-text: "Georgia", "Iowan Old Style", serif;
+  --font-monospace: "JetBrains Mono", "Fira Code", monospace;
+  --font-text-size: 16.5px;
+  --line-height-normal: 1.75;
+
+  --bold-color: #f0c380;
+  --italic-color: #d9b98c;
+  --link-color: #e0a458;
+  --link-color-hover: #f0b96a;
+  --link-unresolved-color: #8a6f4f;
+
+  --blockquote-border-color: var(--interactive-accent);
+  --code-background: #24201b;
+  --code-normal: #d9b98c;
+
+  --file-line-width: 720px;
+  --tab-radius: 8px 8px 0 0;
+  --radius-s: 6px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+}
+
+/* ===== Layout / readable width & spacing ===== */
+.markdown-source-view.mod-cm6 .cm-content,
+.markdown-preview-view.markdown-rendered .markdown-preview-sizer {
+  padding: 2.5em 1.5em;
+  line-height: var(--line-height-normal);
+  letter-spacing: 0.15px;
+}
+
+/* Cap width ONLY when Obsidian's "readable line length" setting is on */
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
+.markdown-preview-view.markdown-rendered.is-readable-line-width .markdown-preview-sizer {
+  max-width: var(--file-line-width);
+  margin: 0 auto;
+}
+
+/* Full width when readable line length is off */
+.markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-content,
+.markdown-preview-view.markdown-rendered:not(.is-readable-line-width) .markdown-preview-sizer {
+  max-width: none;
+  margin: 0;
+}
+
+.workspace-leaf-content {
+  background: var(--background-primary);
+}
+
+/* ===== Headers: bigger, bordered, breathing room ===== */
+.markdown-preview-view h1,
+.cm-header-1 {
+  font-size: 2.1em;
+  color: var(--h1-color);
+  border-bottom: 2px solid var(--interactive-accent);
+  padding-bottom: 0.3em;
+  margin-top: 1.2em;
+}
+.markdown-preview-view h2,
+.cm-header-2 {
+  font-size: 1.6em;
+  color: var(--h2-color);
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 0.2em;
+  margin-top: 1em;
+}
+.markdown-preview-view h3,
+.cm-header-3 {
+  font-size: 1.3em;
+  color: var(--h3-color);
+  margin-top: 0.9em;
+}
+h4, h5, h6 { color: var(--h4-color); }
+
+/* ===== Sidebar redesign ===== */
+.workspace-split.mod-left-split .workspace-tab-header-container,
+.nav-header {
+  background: var(--background-secondary);
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.nav-file-title, .nav-folder-title {
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin: 1px 4px;
+}
+.nav-file-title:hover, .nav-folder-title:hover {
+  background: var(--background-modifier-hover);
+}
+.nav-file-title.is-active {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  font-weight: 600;
+}
+
+/* ===== Tabs redesign ===== */
+.workspace-tab-header {
+  border-radius: var(--tab-radius);
+  margin-right: 2px;
+  background: var(--background-secondary);
+}
+.workspace-tab-header.is-active {
+  background: var(--interactive-accent);
+}
+.workspace-tab-header.is-active .workspace-tab-header-inner-title {
+  color: var(--text-on-accent);
+  font-weight: 600;
+}
+
+/* ===== Status bar ===== */
+.status-bar {
+  background: var(--background-secondary);
+  border-top: 1px solid var(--background-modifier-border);
+  font-size: 0.8em;
+  color: var(--text-faint);
+}
+
+/* ===== Blockquote ===== */
+blockquote {
+  background: var(--background-primary-alt);
+  border-left: 3px solid var(--interactive-accent);
+  padding: 0.6em 1.1em;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* ===== Code blocks ===== */
+pre {
+  border-radius: var(--radius-m);
+  border: 1px solid var(--background-modifier-border);
+  padding: 1em;
+}
+code {
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+
+/* ===== Tags ===== */
+.tag {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-radius: 12px;
+  padding: 0.1em 0.7em;
+  font-weight: 500;
+}
+
+/* ===== Scrollbars ===== */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb {
+  background: var(--background-modifier-border);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--interactive-accent);
+}
+
+/* ===== Buttons ===== */
+button, .clickable-icon {
+  border-radius: var(--radius-s);
+  transition: background 0.15s ease;
+}
+
+/* ===== Notion-style banner — PURE CSS, no plugin =====
+   Usage: add to note frontmatter:
+   ---
+   cssclasses: banner-1
+   ---
+   Swap banner-1 → banner-2 / banner-3 / banner-4 for different colors.
+*/
+.view-content:has([class*="banner-"]) {
+  position: relative;
+}
+
+.markdown-source-view[class*="banner-"] .cm-sizer::before,
+.markdown-preview-view[class*="banner-"] .markdown-preview-sizer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 220px;
+  margin-bottom: 1.5em;
+  border-radius: 0 0 var(--radius-l) var(--radius-l);
+}
+
+.banner-1 .cm-sizer::before,
+.banner-1 .markdown-preview-sizer::before {
+  background: linear-gradient(135deg, #4a2f1a, #b5732f, #e0a458);
+}
+.banner-2 .cm-sizer::before,
+.banner-2 .markdown-preview-sizer::before {
+  background: linear-gradient(135deg, #1a2f2a, #2f6b5a, #5fae8f);
+}
+.banner-3 .cm-sizer::before,
+.banner-3 .markdown-preview-sizer::before {
+  background: linear-gradient(135deg, #2a1a2f, #6b2f6b, #ae5fae);
+}
+.banner-4 .cm-sizer::before,
+.banner-4 .markdown-preview-sizer::before {
+  background: linear-gradient(135deg, #2f1a1a, #6b2f2f, #ae5f5f);
+}
+
+/* ===== Horizontal rule ===== */
+hr {
+  border: none;
+  border-top: 1px dashed var(--background-modifier-border);
+  margin: 2em 0;
+}
