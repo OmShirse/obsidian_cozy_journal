@@ -193,42 +193,9 @@ button, .clickable-icon {
   transition: background 0.15s ease;
 }
 
-/* ===== Notion-style banner — PURE CSS, no plugin =====
-   Usage: add to note frontmatter:
-   ---
-   cssclasses: banner-1
-   ---
-   Swap banner-1 → banner-2 / banner-3 / banner-4 for different colors.
-*/
-.view-content:has([class*="banner-"]) {
-  position: relative;
-}
-
-.markdown-source-view[class*="banner-"] .cm-sizer::before,
-.markdown-preview-view[class*="banner-"] .markdown-preview-sizer::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 220px;
-  margin-bottom: 1.5em;
-  border-radius: 0 0 var(--radius-l) var(--radius-l);
-}
-
-.banner-1 .cm-sizer::before,
-.banner-1 .markdown-preview-sizer::before {
-  background: linear-gradient(135deg, #4a2f1a, #b5732f, #e0a458);
-}
-.banner-2 .cm-sizer::before,
-.banner-2 .markdown-preview-sizer::before {
-  background: linear-gradient(135deg, #1a2f2a, #2f6b5a, #5fae8f);
-}
-.banner-3 .cm-sizer::before,
-.banner-3 .markdown-preview-sizer::before {
-  background: linear-gradient(135deg, #2a1a2f, #6b2f6b, #ae5fae);
-}
-.banner-4 .cm-sizer::before,
-.banner-4 .markdown-preview-sizer::before {
-  background: linear-gradient(135deg, #2f1a1a, #6b2f2f, #ae5f5f);
+/* ===== Hide properties/frontmatter box ===== */
+.metadata-container {
+  display: none !important;
 }
 
 /* ===== Horizontal rule ===== */
@@ -236,4 +203,40 @@ hr {
   border: none;
   border-top: 1px dashed var(--background-modifier-border);
   margin: 2em 0;
+}
+
+/* ===== Image styling ===== */
+.markdown-preview-view img {
+  margin: 20px;
+  border-radius: 15px;
+  border: 5px solid white;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+.markdown-preview-view img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  opacity: 0.9;
+}
+
+/* ===== List bullet ===== */
+.list-bullet.list-bullet.list-bullet:after {
+  content: "◈";
+  height: unset;
+  width: unset;
+  background: transparent;
+  margin-right: 10px;
+  color: var(--text-accent);
+}
+
+/* ===== Justify text in Reading View ===== */
+.markdown-preview-view p,
+.markdown-preview-view li {
+  text-align: justify;
+}
+
+/* ===== Justify text in Live Preview / Editing View ===== */
+.markdown-source-view.mod-cm6 .cm-content {
+  text-align: justify;
 }
