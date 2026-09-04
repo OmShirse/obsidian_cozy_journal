@@ -194,8 +194,6 @@ button, .clickable-icon {
 }
 
 /* ===== Hide properties/frontmatter box ===== */
-.metadata-container {
-  display: none !important;
 .theme-dark .metadata-container,
 .theme-light .metadata-container {
   display: none;
