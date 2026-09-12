@@ -194,8 +194,9 @@ button, .clickable-icon {
 }
 
 /* ===== Hide properties/frontmatter box ===== */
-.metadata-container {
-  display: none !important;
+.theme-dark .metadata-container,
+.theme-light .metadata-container {
+  display: none;
 }
 
 /* ===== Horizontal rule ===== */
@@ -239,4 +240,14 @@ hr {
 /* ===== Justify text in Live Preview / Editing View ===== */
 .markdown-source-view.mod-cm6 .cm-content {
   text-align: justify;
+}
+
+/* ===== Canvas node fixes ===== */
+.canvas-node-content.markdown-embed .markdown-preview-view p,
+.canvas-node-content.markdown-embed .markdown-preview-view li {
+  text-align: left;
+}
+.canvas-node {
+  --canvas-node-default-width: 360px;
+  --canvas-node-default-height: 260px;
 }

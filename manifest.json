@@ -1,10 +1,6 @@
 {
   "name": "Cozy Journal",
-<<<<<<< HEAD
   "version": "1.0.6",
-=======
-  "version": "1.0.5",
->>>>>>> 0adba5775cecd866a2bd50abc988c92fa4d19570
   "minAppVersion": "1.0.0",
   "author": "OmShirse",
 "authorUrl": "https://github.com/OmShirse"
