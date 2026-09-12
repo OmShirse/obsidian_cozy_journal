@@ -194,9 +194,8 @@ button, .clickable-icon {
 }
 
 /* ===== Hide properties/frontmatter box ===== */
-.theme-dark .metadata-container,
-.theme-light .metadata-container {
-  display: none;
+.metadata-container {
+  display: none !important;
 }
 
 /* ===== Horizontal rule ===== */
