@@ -243,10 +243,27 @@ hr {
 }
 
 /* ===== Canvas node fixes ===== */
+/* Reduce padding & line-height so text stays visible in small boxes */
+.canvas-node-content.markdown-embed .markdown-preview-view .markdown-preview-sizer,
+.canvas-node-content .cm-content {
+  padding: 0.6em 0.8em !important;
+  line-height: 1.5 !important;
+}
+
+/* Remove justification from all text inside canvas nodes */
 .canvas-node-content.markdown-embed .markdown-preview-view p,
-.canvas-node-content.markdown-embed .markdown-preview-view li {
+.canvas-node-content.markdown-embed .markdown-preview-view li,
+.canvas-node-content.markdown-embed .markdown-preview-view h1,
+.canvas-node-content.markdown-embed .markdown-preview-view h2,
+.canvas-node-content.markdown-embed .markdown-preview-view h3,
+.canvas-node-content.markdown-embed .markdown-preview-view h4,
+.canvas-node-content.markdown-embed .markdown-preview-view h5,
+.canvas-node-content.markdown-embed .markdown-preview-view h6,
+.canvas-node-content.markdown-embed .markdown-preview-view blockquote,
+.canvas-node-content .cm-content {
   text-align: left;
 }
+
 .canvas-node {
   --canvas-node-default-width: 360px;
   --canvas-node-default-height: 260px;
