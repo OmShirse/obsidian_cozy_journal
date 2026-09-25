@@ -56,8 +56,8 @@
 /* ===== Layout / readable width & spacing ===== */
 .markdown-source-view.mod-cm6 .cm-content,
 .markdown-preview-view.markdown-rendered .markdown-preview-sizer {
-  padding: 2.5em 1.5em;
-  line-height: var(--line-height-normal);
+  padding: var(--content-padding, 2.5em 1.5em);
+  line-height: var(--content-line-height, var(--line-height-normal));
   letter-spacing: 0.15px;
 }
 
@@ -244,10 +244,10 @@ hr {
 
 /* ===== Canvas node fixes ===== */
 /* Reduce padding & line-height so text stays visible in small boxes */
-.canvas-node-content.markdown-embed .markdown-preview-view .markdown-preview-sizer,
-.canvas-node-content .cm-content {
-  padding: 0.6em 0.8em !important;
-  line-height: 1.5 !important;
+/* Override spacing via CSS variables — no !important needed */
+.canvas-node-content {
+  --content-padding: 0.6em 0.8em;
+  --content-line-height: 1.5;
 }
 
 /* Remove justification from all text inside canvas nodes */
