@@ -1,4 +1,4 @@
-/* Cozy Journal v1.2.0 — full dark warm overhaul for Obsidian */
+/* Cozy Journal v1.2.1 — full dark warm overhaul for Obsidian */
 
 .theme-dark {
   --background-primary: #000000;
@@ -245,11 +245,13 @@ hr {
   border-color: #4a3c30;
 }
 
-/* Selected / focused node */
-.canvas-node.is-focused .canvas-node-container,
-.canvas-node.is-selected .canvas-node-container {
-  border-color: var(--interactive-accent) !important;
-  box-shadow: 0 0 0 2px rgba(181,115,47,0.35), 0 4px 20px rgba(0,0,0,0.5) !important;
+/* Selected / focused node
+   Fix: replaced !important with .theme-dark parent to raise specificity
+   above Obsidian's default selectors — no !important needed. */
+.theme-dark .canvas-node.is-focused .canvas-node-container,
+.theme-dark .canvas-node.is-selected .canvas-node-container {
+  border-color: var(--interactive-accent);
+  box-shadow: 0 0 0 2px rgba(181,115,47,0.35), 0 4px 20px rgba(0,0,0,0.5);
 }
 
 /* Node label */
