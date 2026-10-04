@@ -4,7 +4,7 @@
 
 A warm, dark journaling theme for Obsidian. Pure black background, warm amber accents, serif reading font, and Notion-style gradient banners — no plugins required.
 
-> **Version:** 1.2.0 · **Author:** [OmShirse](https://github.com/OmShirse) · **License:** MIT
+> **Version:** 1.0.6 · **Author:** [OmShirse](https://github.com/OmShirse) · **License:** MIT
 
 ---
 
