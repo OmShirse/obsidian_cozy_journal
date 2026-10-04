@@ -51,51 +51,48 @@
   --radius-s: 6px;
   --radius-m: 8px;
   --radius-l: 12px;
+
+  /* Canvas — override Obsidian default color palette with warm tones */
+  --canvas-color-1: 139, 46, 46;
+  --canvas-color-2: 181, 115, 47;
+  --canvas-color-3: 160, 144, 32;
+  --canvas-color-4: 58, 122, 74;
+  --canvas-color-5: 42, 112, 128;
+  --canvas-color-6: 96, 64, 160;
 }
 
-/* ===== Layout / readable width & spacing ===== */
+/* ===== Layout ===== */
 .markdown-source-view.mod-cm6 .cm-content,
 .markdown-preview-view.markdown-rendered .markdown-preview-sizer {
   padding: var(--content-padding, 2.5em 1.5em);
   line-height: var(--content-line-height, var(--line-height-normal));
   letter-spacing: 0.15px;
 }
-
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
 .markdown-preview-view.markdown-rendered.is-readable-line-width .markdown-preview-sizer {
   max-width: var(--file-line-width);
   margin: 0 auto;
 }
-
 .markdown-source-view.mod-cm6:not(.is-readable-line-width) .cm-content,
 .markdown-preview-view.markdown-rendered:not(.is-readable-line-width) .markdown-preview-sizer {
   max-width: none;
   margin: 0;
 }
-
-.workspace-leaf-content {
-  background: var(--background-primary);
-}
+.workspace-leaf-content { background: var(--background-primary); }
 
 /* ===== Headers ===== */
 .markdown-preview-view h1, .cm-header-1 {
-  font-size: 2.1em;
-  color: var(--h1-color);
+  font-size: 2.1em; color: var(--h1-color);
   border-bottom: 2px solid var(--interactive-accent);
-  padding-bottom: 0.3em;
-  margin-top: 1.2em;
+  padding-bottom: 0.3em; margin-top: 1.2em;
 }
 .markdown-preview-view h2, .cm-header-2 {
-  font-size: 1.6em;
-  color: var(--h2-color);
+  font-size: 1.6em; color: var(--h2-color);
   border-bottom: 1px solid var(--background-modifier-border);
-  padding-bottom: 0.2em;
-  margin-top: 1em;
+  padding-bottom: 0.2em; margin-top: 1em;
 }
 .markdown-preview-view h3, .cm-header-3 {
-  font-size: 1.3em;
-  color: var(--h3-color);
-  margin-top: 0.9em;
+  font-size: 1.3em; color: var(--h3-color); margin-top: 0.9em;
 }
 h4, h5, h6 { color: var(--h4-color); }
 
@@ -106,39 +103,31 @@ h4, h5, h6 { color: var(--h4-color); }
   border-bottom: 1px solid var(--background-modifier-border);
 }
 .nav-file-title, .nav-folder-title {
-  border-radius: 6px;
-  padding: 4px 8px;
-  margin: 1px 4px;
+  border-radius: 6px; padding: 4px 8px; margin: 1px 4px;
 }
 .nav-file-title:hover, .nav-folder-title:hover {
   background: var(--background-modifier-hover);
 }
 .nav-file-title.is-active {
   background: var(--interactive-accent);
-  color: var(--text-on-accent);
-  font-weight: 600;
+  color: var(--text-on-accent); font-weight: 600;
 }
 
 /* ===== Tabs ===== */
 .workspace-tab-header {
-  border-radius: var(--tab-radius);
-  margin-right: 2px;
+  border-radius: var(--tab-radius); margin-right: 2px;
   background: var(--background-secondary);
 }
-.workspace-tab-header.is-active {
-  background: var(--interactive-accent);
-}
+.workspace-tab-header.is-active { background: var(--interactive-accent); }
 .workspace-tab-header.is-active .workspace-tab-header-inner-title {
-  color: var(--text-on-accent);
-  font-weight: 600;
+  color: var(--text-on-accent); font-weight: 600;
 }
 
 /* ===== Status bar ===== */
 .status-bar {
   background: var(--background-secondary);
   border-top: 1px solid var(--background-modifier-border);
-  font-size: 0.8em;
-  color: var(--text-faint);
+  font-size: 0.8em; color: var(--text-faint);
 }
 
 /* ===== Blockquote ===== */
@@ -147,51 +136,39 @@ blockquote {
   border-left: 3px solid var(--interactive-accent);
   padding: 0.6em 1.1em;
   border-radius: 0 8px 8px 0;
-  font-style: italic;
-  color: var(--text-muted);
+  font-style: italic; color: var(--text-muted);
 }
 
-/* ===== Code blocks ===== */
+/* ===== Code ===== */
 pre {
   border-radius: var(--radius-m);
   border: 1px solid var(--background-modifier-border);
   padding: 1em;
 }
-code {
-  border-radius: 4px;
-  padding: 0.1em 0.35em;
-}
+code { border-radius: 4px; padding: 0.1em 0.35em; }
 
 /* ===== Tags ===== */
 .tag {
   background: var(--interactive-accent);
   color: var(--text-on-accent);
-  border-radius: 12px;
-  padding: 0.1em 0.7em;
-  font-weight: 500;
+  border-radius: 12px; padding: 0.1em 0.7em; font-weight: 500;
 }
 
 /* ===== Scrollbars ===== */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-thumb {
-  background: var(--background-modifier-border);
-  border-radius: 6px;
+  background: var(--background-modifier-border); border-radius: 6px;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: var(--interactive-accent);
-}
+::-webkit-scrollbar-thumb:hover { background: var(--interactive-accent); }
 
 /* ===== Buttons ===== */
 button, .clickable-icon {
-  border-radius: var(--radius-s);
-  transition: background 0.15s ease;
+  border-radius: var(--radius-s); transition: background 0.15s ease;
 }
 
 /* ===== Hide frontmatter ===== */
 .theme-dark .metadata-container,
-.theme-light .metadata-container {
-  display: none;
-}
+.theme-light .metadata-container { display: none; }
 
 /* ===== Horizontal rule ===== */
 hr {
@@ -202,53 +179,35 @@ hr {
 
 /* ===== Images ===== */
 .markdown-preview-view img {
-  margin: 20px;
-  border-radius: 15px;
-  border: 5px solid white;
-  display: inline-block;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px; border-radius: 15px;
+  border: 5px solid white; display: inline-block;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
 }
 .markdown-preview-view img:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
   opacity: 0.9;
 }
 
 /* ===== List bullet ===== */
 .list-bullet.list-bullet.list-bullet:after {
-  content: "◈";
-  height: unset;
-  width: unset;
-  background: transparent;
-  margin-right: 10px;
+  content: "◈"; height: unset; width: unset;
+  background: transparent; margin-right: 10px;
   color: var(--text-accent);
 }
 
 /* ===== Justified text ===== */
 .markdown-preview-view p,
-.markdown-preview-view li {
-  text-align: justify;
-}
-.markdown-source-view.mod-cm6 .cm-content {
-  text-align: justify;
-}
+.markdown-preview-view li { text-align: justify; }
+.markdown-source-view.mod-cm6 .cm-content { text-align: justify; }
 
 /* ══════════════════════════════════════════════════════
-   CANVAS — Advanced Styling (CSS-only, no plugin needed)
+   CANVAS — CSS-only (Obsidian-native selectors only)
+   No plugin required
    ══════════════════════════════════════════════════════ */
 
-/* ----- Base fixes ----- */
-.canvas-node-content {
-  --content-padding: 0.6em 0.8em;
-  --content-line-height: 1.5;
-}
-.canvas-node {
-  --canvas-node-default-width: 360px;
-  --canvas-node-default-height: 260px;
-}
-
-/* No justification inside canvas nodes */
+/* Prevent justified text inside canvas nodes */
 .canvas-node-content.markdown-embed .markdown-preview-view p,
 .canvas-node-content.markdown-embed .markdown-preview-view li,
 .canvas-node-content.markdown-embed .markdown-preview-view h1,
@@ -258,93 +217,42 @@ hr {
 .canvas-node-content.markdown-embed .markdown-preview-view h5,
 .canvas-node-content.markdown-embed .markdown-preview-view h6,
 .canvas-node-content.markdown-embed .markdown-preview-view blockquote,
-.canvas-node-content .cm-content {
-  text-align: left;
+.canvas-node-content .cm-content { text-align: left; }
+
+/* Default node size */
+.canvas-node {
+  --canvas-node-default-width: 360px;
+  --canvas-node-default-height: 260px;
 }
 
-/* ----- Canvas background — warm dot grid ----- */
+/* Canvas background: warm near-black + dot grid */
 .canvas-background {
   background-color: #0d0b09;
   background-image: radial-gradient(circle, #2a241f 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
-/* ----- Node base card ----- */
+/* Node base card */
 .canvas-node .canvas-node-container {
   border-radius: var(--radius-m);
   border: 1.5px solid var(--background-modifier-border);
   background: var(--background-primary);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.45);
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 .canvas-node .canvas-node-container:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
   border-color: #4a3c30;
 }
 
-/* ----- Selection highlight ----- */
+/* Selected / focused node */
 .canvas-node.is-focused .canvas-node-container,
 .canvas-node.is-selected .canvas-node-container {
-  border-color: var(--interactive-accent);
-  box-shadow: 0 0 0 2px rgba(181, 115, 47, 0.35), 0 4px 20px rgba(0,0,0,0.5);
+  border-color: var(--interactive-accent) !important;
+  box-shadow: 0 0 0 2px rgba(181,115,47,0.35), 0 4px 20px rgba(0,0,0,0.5) !important;
 }
 
-/* ----- Node color classes (1–6) ----- */
-/* 1 — Red */
-.canvas-node[data-color="1"] .canvas-node-container {
-  background: #1e0f0f;
-  border-color: #8b2e2e;
-  box-shadow: 0 2px 12px rgba(139, 46, 46, 0.25);
-}
-.canvas-node[data-color="1"] .canvas-node-label { color: #e07070; }
-
-/* 2 — Amber */
-.canvas-node[data-color="2"] .canvas-node-container {
-  background: #1e1408;
-  border-color: #b5732f;
-  box-shadow: 0 2px 12px rgba(181, 115, 47, 0.25);
-}
-.canvas-node[data-color="2"] .canvas-node-label { color: #e0a458; }
-
-/* 3 — Gold */
-.canvas-node[data-color="3"] .canvas-node-container {
-  background: #1a1800;
-  border-color: #a09020;
-  box-shadow: 0 2px 12px rgba(160, 144, 32, 0.2);
-}
-.canvas-node[data-color="3"] .canvas-node-label { color: #d4c050; }
-
-/* 4 — Green */
-.canvas-node[data-color="4"] .canvas-node-container {
-  background: #0c1810;
-  border-color: #3a7a4a;
-  box-shadow: 0 2px 12px rgba(58, 122, 74, 0.2);
-}
-.canvas-node[data-color="4"] .canvas-node-label { color: #70bb85; }
-
-/* 5 — Teal */
-.canvas-node[data-color="5"] .canvas-node-container {
-  background: #081818;
-  border-color: #2a7080;
-  box-shadow: 0 2px 12px rgba(42, 112, 128, 0.2);
-}
-.canvas-node[data-color="5"] .canvas-node-label { color: #60b0c0; }
-
-/* 6 — Purple */
-.canvas-node[data-color="6"] .canvas-node-container {
-  background: #12081e;
-  border-color: #6040a0;
-  box-shadow: 0 2px 12px rgba(96, 64, 160, 0.2);
-}
-.canvas-node[data-color="6"] .canvas-node-label { color: #a080d8; }
-
-/* ----- Node font ----- */
-.canvas-node-content {
-  font-family: var(--font-text);
-  font-size: 0.97em;
-  color: var(--text-normal);
-  line-height: 1.55;
-}
+/* Node label */
 .canvas-node-label {
   font-size: 0.78em;
   font-family: var(--font-text);
@@ -353,82 +261,119 @@ hr {
   padding: 3px 6px;
 }
 
-/* ----- Node shapes ----- */
-.canvas-node.mod-pill .canvas-node-container {
-  border-radius: 999px;
+/* ── Node colors (right-click → Color → 1–6) ──
+   Obsidian natively adds data-color attribute */
+.canvas-node[data-color="1"] .canvas-node-container { background: rgba(139,46,46,0.12);  border-color: rgb(139,46,46);  }
+.canvas-node[data-color="2"] .canvas-node-container { background: rgba(181,115,47,0.12); border-color: rgb(181,115,47); }
+.canvas-node[data-color="3"] .canvas-node-container { background: rgba(160,144,32,0.12); border-color: rgb(160,144,32); }
+.canvas-node[data-color="4"] .canvas-node-container { background: rgba(58,122,74,0.12);  border-color: rgb(58,122,74);  }
+.canvas-node[data-color="5"] .canvas-node-container { background: rgba(42,112,128,0.12); border-color: rgb(42,112,128); }
+.canvas-node[data-color="6"] .canvas-node-container { background: rgba(96,64,160,0.12);  border-color: rgb(96,64,160);  }
+
+.canvas-node[data-color="1"] .canvas-node-label { color: #e07070; }
+.canvas-node[data-color="2"] .canvas-node-label { color: #e0a458; }
+.canvas-node[data-color="3"] .canvas-node-label { color: #d4c050; }
+.canvas-node[data-color="4"] .canvas-node-label { color: #70bb85; }
+.canvas-node[data-color="5"] .canvas-node-label { color: #60b0c0; }
+.canvas-node[data-color="6"] .canvas-node-label { color: #a080d8; }
+
+/* ── Node types (Obsidian-native classes) ── */
+
+/* File / note embed */
+.canvas-node-file .canvas-node-container {
+  background: #0d0b09;
+  border-color: #3a322a;
 }
-.canvas-node.mod-diamond .canvas-node-container {
-  transform: rotate(45deg);
-  border-radius: var(--radius-s);
-}
-.canvas-node.mod-diamond .canvas-node-content {
-  transform: rotate(-45deg);
+.canvas-node-file .canvas-node-label {
+  font-size: 0.75em;
+  color: var(--text-muted);
 }
 
-/* ----- Edges / arrows ----- */
-.canvas-edge path {
+/* Plain text node */
+.canvas-node-text .canvas-node-container {
+  background: #141210;
+  border-color: #2a241f;
+}
+.canvas-node-text .canvas-node-content {
+  font-family: var(--font-text);
+  font-size: 1em;
+  color: var(--text-normal);
+}
+.canvas-node-text:hover .canvas-node-container {
+  border-color: var(--interactive-accent);
+}
+
+/* Link / URL node */
+.canvas-node-link .canvas-node-container {
+  background: #0e0e0c;
+  border-color: #2a241f;
+}
+.canvas-node-link .canvas-node-content,
+.canvas-node-link .canvas-node-content a {
+  color: var(--link-color);
+}
+
+/* ── Edges / arrows ──
+   Obsidian SVG uses .canvas-edge-path for the stroke
+   data-color set natively by Obsidian on right-click → Color */
+.canvas-edge .canvas-edge-path {
   stroke: #4a3c30;
   stroke-width: 2px;
-  transition: stroke 0.2s ease, stroke-width 0.2s ease;
+  transition: stroke 0.2s ease;
 }
-.canvas-edge:hover path {
+.canvas-edge:hover .canvas-edge-path,
+.canvas-edge.is-selected .canvas-edge-path {
   stroke: var(--interactive-accent);
   stroke-width: 2.5px;
 }
-.canvas-edge[data-color="1"] path { stroke: #8b2e2e; }
-.canvas-edge[data-color="2"] path { stroke: #b5732f; }
-.canvas-edge[data-color="3"] path { stroke: #a09020; }
-.canvas-edge[data-color="4"] path { stroke: #3a7a4a; }
-.canvas-edge[data-color="5"] path { stroke: #2a7080; }
-.canvas-edge[data-color="6"] path { stroke: #6040a0; }
+.canvas-edge[data-color="1"] .canvas-edge-path { stroke: rgb(139,46,46);  }
+.canvas-edge[data-color="2"] .canvas-edge-path { stroke: rgb(181,115,47); }
+.canvas-edge[data-color="3"] .canvas-edge-path { stroke: rgb(160,144,32); }
+.canvas-edge[data-color="4"] .canvas-edge-path { stroke: rgb(58,122,74);  }
+.canvas-edge[data-color="5"] .canvas-edge-path { stroke: rgb(42,112,128); }
+.canvas-edge[data-color="6"] .canvas-edge-path { stroke: rgb(96,64,160);  }
 
-.canvas-edge marker path { fill: #4a3c30; }
-.canvas-edge:hover marker path { fill: var(--interactive-accent); }
+/* Arrow endpoint markers */
+.canvas-edge .canvas-edge-end-marker path { fill: #4a3c30; }
+.canvas-edge:hover .canvas-edge-end-marker path,
+.canvas-edge.is-selected .canvas-edge-end-marker path { fill: var(--interactive-accent); }
 
-.canvas-edge.mod-dashed path { stroke-dasharray: 8 4; }
-
-/* ----- Group nodes ----- */
-.canvas-node.canvas-node-group .canvas-node-label {
-  font-size: 0.85em;
-  font-weight: 600;
-  color: var(--text-accent);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  background: rgba(0,0,0,0.4);
-  padding: 2px 8px;
-  border-radius: 4px;
-}
-.canvas-node.canvas-node-group .canvas-node-container {
-  background: rgba(181, 115, 47, 0.05);
-  border: 1.5px dashed #4a3c30;
+/* ── Group nodes (.canvas-node-group is Obsidian-native) ── */
+.canvas-node-group > .canvas-node-container {
+  background: rgba(181,115,47,0.04);
+  border: 1.5px dashed #3a322a;
   border-radius: var(--radius-l);
 }
-.canvas-node.canvas-node-group[data-color="1"] .canvas-node-container { background: rgba(139,46,46,0.07);  border-color: #8b2e2e; }
-.canvas-node.canvas-node-group[data-color="2"] .canvas-node-container { background: rgba(181,115,47,0.07); border-color: #b5732f; }
-.canvas-node.canvas-node-group[data-color="3"] .canvas-node-container { background: rgba(160,144,32,0.07); border-color: #a09020; }
-.canvas-node.canvas-node-group[data-color="4"] .canvas-node-container { background: rgba(58,122,74,0.07);  border-color: #3a7a4a; }
-.canvas-node.canvas-node-group[data-color="5"] .canvas-node-container { background: rgba(42,112,128,0.07); border-color: #2a7080; }
-.canvas-node.canvas-node-group[data-color="6"] .canvas-node-container { background: rgba(96,64,160,0.07);  border-color: #6040a0; }
+.canvas-node-group > .canvas-node-label {
+  font-size: 0.82em; font-weight: 600;
+  color: var(--text-accent);
+  letter-spacing: 0.5px; text-transform: uppercase;
+  background: rgba(0,0,0,0.5);
+  padding: 2px 8px; border-radius: 4px;
+}
+.canvas-node-group[data-color="1"] > .canvas-node-container { background: rgba(139,46,46,0.07);  border-color: rgb(139,46,46);  }
+.canvas-node-group[data-color="2"] > .canvas-node-container { background: rgba(181,115,47,0.07); border-color: rgb(181,115,47); }
+.canvas-node-group[data-color="3"] > .canvas-node-container { background: rgba(160,144,32,0.07); border-color: rgb(160,144,32); }
+.canvas-node-group[data-color="4"] > .canvas-node-container { background: rgba(58,122,74,0.07);  border-color: rgb(58,122,74);  }
+.canvas-node-group[data-color="5"] > .canvas-node-container { background: rgba(42,112,128,0.07); border-color: rgb(42,112,128); }
+.canvas-node-group[data-color="6"] > .canvas-node-container { background: rgba(96,64,160,0.07);  border-color: rgb(96,64,160);  }
 
-/* ----- Canvas scrollbars ----- */
+/* ── Canvas UI elements ── */
 .canvas-wrapper ::-webkit-scrollbar { width: 8px; }
 .canvas-wrapper ::-webkit-scrollbar-thumb {
-  background: #2a241f;
-  border-radius: 6px;
+  background: #2a241f; border-radius: 6px;
 }
 .canvas-wrapper ::-webkit-scrollbar-thumb:hover {
   background: var(--interactive-accent);
 }
 
-/* ----- Mini-map ----- */
 .canvas-minimap {
-  background: rgba(13, 11, 9, 0.85);
+  background: rgba(13,11,9,0.88);
   border: 1px solid #2a241f;
   border-radius: var(--radius-m);
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
-/* ----- Canvas toolbar ----- */
 .canvas-controls {
   background: var(--background-secondary);
   border: 1px solid var(--background-modifier-border);
@@ -436,33 +381,10 @@ hr {
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 .canvas-controls button {
-  color: var(--text-muted);
-  border-radius: var(--radius-s);
+  color: var(--text-muted); border-radius: var(--radius-s);
+  transition: background 0.15s ease, color 0.15s ease;
 }
 .canvas-controls button:hover {
   background: var(--background-modifier-hover);
   color: var(--text-accent);
-}
-
-/* ----- Plain text nodes ----- */
-.canvas-node-text .canvas-node-container {
-  background: transparent;
-  border-color: transparent;
-  box-shadow: none;
-}
-.canvas-node-text .canvas-node-content {
-  font-size: 1.05em;
-  color: var(--text-normal);
-}
-.canvas-node-text:hover .canvas-node-container {
-  border-color: #2a241f;
-}
-
-/* ----- Link / URL nodes ----- */
-.canvas-node-link .canvas-node-container {
-  background: #10100e;
-  border-color: #2a241f;
-}
-.canvas-node-link .canvas-node-content {
-  color: var(--link-color);
 }
