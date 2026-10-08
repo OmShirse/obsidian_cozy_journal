@@ -38,8 +38,8 @@
 
   --bold-color: #c8b8f0;
   --italic-color: #b0a0d8;
-  --link-color: #a090e0;
-  --link-color-hover: #c0b0f8;
+  --link-color: #ffffff;
+  --link-color-hover: #ffffff;
   --link-unresolved-color: #685880;
 
   --blockquote-border-color: var(--interactive-accent);
@@ -159,11 +159,13 @@ a.internal-link,
 a.external-link,
 .markdown-preview-view a {
   text-decoration: none;
+  color: #ffffff;
 }
 a.internal-link:hover,
 a.external-link:hover,
 .markdown-preview-view a:hover {
   text-decoration: underline;
+  color: #ffffff;
 }
 
 /* ===== Scrollbars ===== */
