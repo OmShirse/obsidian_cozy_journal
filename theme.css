@@ -1,4 +1,4 @@
-/* Cozy Journal v1.2.1 — full dark warm overhaul for Obsidian */
+/* Cozy Journal v1.2.0 — full dark warm overhaul for Obsidian */
 
 .theme-dark {
   --background-primary: #000000;
@@ -10,36 +10,36 @@
   --background-modifier-active-hover: #352c25;
   --background-modifier-box-shadow: rgba(0,0,0,0.4);
 
-  --text-normal: #ead9c4;
-  --text-muted: #a89684;
-  --text-faint: #6f6255;
-  --text-accent: #e0a458;
-  --text-accent-hover: #f0b96a;
+  --text-normal: #d0cbc4;
+  --text-muted: #9a9088;
+  --text-faint: #6f6760;
+  --text-accent: #b8a898;
+  --text-accent-hover: #cdbfb0;
   --text-error: #d9695f;
-  --text-selection: #4a3826;
+  --text-selection: #3a3028;
   --text-on-accent: #1e1a17;
 
   --interactive-normal: #2a241f;
   --interactive-hover: #352c25;
-  --interactive-accent: #b5732f;
-  --interactive-accent-hover: #cc8340;
+  --interactive-accent: #7a6858;
+  --interactive-accent-hover: #8a7868;
 
-  --h1-color: #e6b57c;
-  --h2-color: #dba86d;
-  --h3-color: #cf9c62;
-  --h4-color: #c39058;
-  --h5-color: #b8855a;
-  --h6-color: #a87c52;
+  --h1-color: #a898c8;
+  --h2-color: #9888b8;
+  --h3-color: #8878a8;
+  --h4-color: #786898;
+  --h5-color: #685888;
+  --h6-color: #584878;
 
   --font-text: "Georgia", "Iowan Old Style", serif;
   --font-monospace: "JetBrains Mono", "Fira Code", monospace;
   --font-text-size: 16.5px;
   --line-height-normal: 1.75;
 
-  --bold-color: #f0c380;
-  --italic-color: #d9b98c;
-  --link-color: #e0a458;
-  --link-color-hover: #f0b96a;
+  --bold-color: #d4c8b8;
+  --italic-color: #bdb0a0;
+  --link-color: #8fb0c8;
+  --link-color-hover: #a8c8e0;
   --link-unresolved-color: #8a6f4f;
 
   --blockquote-border-color: var(--interactive-accent);
@@ -192,9 +192,9 @@ hr {
 
 /* ===== List bullet ===== */
 .list-bullet.list-bullet.list-bullet:after {
-  content: "◈"; height: unset; width: unset;
-  background: transparent; margin-right: 10px;
-  color: var(--text-accent);
+  content: "›"; height: unset; width: unset;
+  background: transparent; margin-right: 6px;
+  color: var(--text-faint);
 }
 
 /* ===== Justified text ===== */
@@ -245,13 +245,11 @@ hr {
   border-color: #4a3c30;
 }
 
-/* Selected / focused node
-   Fix: replaced !important with .theme-dark parent to raise specificity
-   above Obsidian's default selectors — no !important needed. */
-.theme-dark .canvas-node.is-focused .canvas-node-container,
-.theme-dark .canvas-node.is-selected .canvas-node-container {
-  border-color: var(--interactive-accent);
-  box-shadow: 0 0 0 2px rgba(181,115,47,0.35), 0 4px 20px rgba(0,0,0,0.5);
+/* Selected / focused node */
+.canvas-node.is-focused .canvas-node-container,
+.canvas-node.is-selected .canvas-node-container {
+  border-color: var(--interactive-accent) !important;
+  box-shadow: 0 0 0 2px rgba(181,115,47,0.35), 0 4px 20px rgba(0,0,0,0.5) !important;
 }
 
 /* Node label */
