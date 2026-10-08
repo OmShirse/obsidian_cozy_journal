@@ -10,7 +10,7 @@
   --background-modifier-active-hover: #352c25;
   --background-modifier-box-shadow: rgba(0,0,0,0.4);
 
-  --text-normal: #d0cbc4;
+  --text-normal: #ffffff;
   --text-muted: #9a9088;
   --text-faint: #6f6760;
   --text-accent: #b8a898;
@@ -36,11 +36,11 @@
   --font-text-size: 16.5px;
   --line-height-normal: 1.75;
 
-  --bold-color: #d4c8b8;
-  --italic-color: #bdb0a0;
-  --link-color: #8fb0c8;
-  --link-color-hover: #a8c8e0;
-  --link-unresolved-color: #8a6f4f;
+  --bold-color: #c8b8f0;
+  --italic-color: #b0a0d8;
+  --link-color: #a090e0;
+  --link-color-hover: #c0b0f8;
+  --link-unresolved-color: #685880;
 
   --blockquote-border-color: var(--interactive-accent);
   --code-background: #24201b;
