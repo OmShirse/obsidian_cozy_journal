@@ -24,12 +24,12 @@
   --interactive-accent: #7a6858;
   --interactive-accent-hover: #8a7868;
 
-  --h1-color: #a898c8;
-  --h2-color: #9888b8;
-  --h3-color: #8878a8;
-  --h4-color: #786898;
-  --h5-color: #685888;
-  --h6-color: #584878;
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-normal);
 
   --font-text: "Georgia", "Iowan Old Style", serif;
   --font-monospace: "JetBrains Mono", "Fira Code", monospace;
