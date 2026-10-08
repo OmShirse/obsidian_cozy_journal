@@ -82,17 +82,17 @@
 
 /* ===== Headers ===== */
 .markdown-preview-view h1, .cm-header-1 {
-  font-size: 2.1em; color: var(--h1-color);
+  color: var(--h1-color);
   border-bottom: 2px solid var(--interactive-accent);
   padding-bottom: 0.3em; margin-top: 1.2em;
 }
 .markdown-preview-view h2, .cm-header-2 {
-  font-size: 1.6em; color: var(--h2-color);
+  color: var(--h2-color);
   border-bottom: 1px solid var(--background-modifier-border);
   padding-bottom: 0.2em; margin-top: 1em;
 }
 .markdown-preview-view h3, .cm-header-3 {
-  font-size: 1.3em; color: var(--h3-color); margin-top: 0.9em;
+  color: var(--h3-color); margin-top: 0.9em;
 }
 h4, h5, h6 { color: var(--h4-color); }
 
@@ -260,11 +260,12 @@ hr {
   border-color: #4a3c30;
 }
 
-/* Selected / focused node */
 .canvas-node.is-focused .canvas-node-container,
-.canvas-node.is-selected .canvas-node-container {
-  border-color: var(--interactive-accent) !important;
-  box-shadow: 0 0 0 2px rgba(181,115,47,0.35), 0 4px 20px rgba(0,0,0,0.5) !important;
+.canvas-node.is-selected .canvas-node-container,
+.canvas-node.is-focused > .canvas-node-container,
+.canvas-node.is-selected > .canvas-node-container {
+  border-color: var(--interactive-accent);
+  box-shadow: 0 0 0 2px rgba(181,115,47,0.35), 0 4px 20px rgba(0,0,0,0.5);
 }
 
 /* Node label */
