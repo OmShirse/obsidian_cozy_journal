@@ -154,7 +154,20 @@ code { border-radius: 4px; padding: 0.1em 0.35em; }
   border-radius: 12px; padding: 0.1em 0.7em; font-weight: 500;
 }
 
+/* ===== Links — no underline ===== */
+a.internal-link,
+a.external-link,
+.markdown-preview-view a {
+  text-decoration: none;
+}
+a.internal-link:hover,
+a.external-link:hover,
+.markdown-preview-view a:hover {
+  text-decoration: underline;
+}
+
 /* ===== Scrollbars ===== */
+
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-thumb {
   background: var(--background-modifier-border); border-radius: 6px;
