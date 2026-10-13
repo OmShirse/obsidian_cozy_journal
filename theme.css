@@ -1,28 +1,28 @@
-/* Cozy Journal v1.2.0 — full dark warm overhaul for Obsidian */
+/* Cozy Journal v1.2.2 — minimalist dark theme for Obsidian */
 
 .theme-dark {
   --background-primary: #000000;
   --background-primary-alt: #000000;
   --background-secondary: #000000;
   --background-secondary-alt: #000000;
-  --background-modifier-border: #3a322a;
-  --background-modifier-hover: #2a241f;
-  --background-modifier-active-hover: #352c25;
+  --background-modifier-border: #2a2a2a;
+  --background-modifier-hover: #1a1a1a;
+  --background-modifier-active-hover: #222222;
   --background-modifier-box-shadow: rgba(0,0,0,0.4);
 
   --text-normal: #ffffff;
-  --text-muted: #9a9088;
-  --text-faint: #6f6760;
-  --text-accent: #b8a898;
-  --text-accent-hover: #cdbfb0;
+  --text-muted: #888888;
+  --text-faint: #555555;
+  --text-accent: #aaaaaa;
+  --text-accent-hover: #cccccc;
   --text-error: #d9695f;
-  --text-selection: #3a3028;
-  --text-on-accent: #1e1a17;
+  --text-selection: #2a2a3a;
+  --text-on-accent: #ffffff;
 
-  --interactive-normal: #2a241f;
-  --interactive-hover: #352c25;
-  --interactive-accent: #7a6858;
-  --interactive-accent-hover: #8a7868;
+  --interactive-normal: #1a1a1a;
+  --interactive-hover: #222222;
+  --interactive-accent: #4a4a5a;
+  --interactive-accent-hover: #5a5a6a;
 
   --h1-color: var(--text-normal);
   --h2-color: var(--text-normal);
@@ -43,8 +43,8 @@
   --link-unresolved-color: #685880;
 
   --blockquote-border-color: var(--interactive-accent);
-  --code-background: #24201b;
-  --code-normal: #d9b98c;
+  --code-background: #111111;
+  --code-normal: #cccccc;
 
   --file-line-width: 720px;
   --tab-radius: 8px 8px 0 0;
@@ -52,10 +52,10 @@
   --radius-m: 8px;
   --radius-l: 12px;
 
-  /* Canvas — override Obsidian default color palette with warm tones */
+  /* Canvas color palette */
   --canvas-color-1: 139, 46, 46;
-  --canvas-color-2: 181, 115, 47;
-  --canvas-color-3: 160, 144, 32;
+  --canvas-color-2: 100, 100, 160;
+  --canvas-color-3: 80, 140, 80;
   --canvas-color-4: 58, 122, 74;
   --canvas-color-5: 42, 112, 128;
   --canvas-color-6: 96, 64, 160;
