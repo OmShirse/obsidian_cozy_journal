@@ -250,22 +250,21 @@ hr {
 /* Node base card */
 .canvas-node .canvas-node-container {
   border-radius: var(--radius-m);
-  border: 1.5px solid var(--background-modifier-border);
+  border: none;
   background: var(--background-primary);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.45);
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.6);
+  transition: box-shadow 0.2s ease;
 }
 .canvas-node .canvas-node-container:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-  border-color: #4a3c30;
+  box-shadow: 0 4px 24px rgba(255,255,255,0.06);
 }
 
+/* Selected / focused node — neutral glow */
 .canvas-node.is-focused .canvas-node-container,
 .canvas-node.is-selected .canvas-node-container,
 .canvas-node.is-focused > .canvas-node-container,
 .canvas-node.is-selected > .canvas-node-container {
-  border-color: var(--interactive-accent);
-  box-shadow: 0 0 0 2px rgba(181,115,47,0.35), 0 4px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 0 0 2px rgba(150,140,200,0.5), 0 4px 24px rgba(0,0,0,0.5);
 }
 
 /* Node label */
@@ -277,18 +276,17 @@ hr {
   padding: 3px 6px;
 }
 
-/* ── Node colors (right-click → Color → 1–6) ──
-   Obsidian natively adds data-color attribute */
-.canvas-node[data-color="1"] .canvas-node-container { background: rgba(139,46,46,0.12);  border-color: rgb(139,46,46);  }
-.canvas-node[data-color="2"] .canvas-node-container { background: rgba(181,115,47,0.12); border-color: rgb(181,115,47); }
-.canvas-node[data-color="3"] .canvas-node-container { background: rgba(160,144,32,0.12); border-color: rgb(160,144,32); }
-.canvas-node[data-color="4"] .canvas-node-container { background: rgba(58,122,74,0.12);  border-color: rgb(58,122,74);  }
-.canvas-node[data-color="5"] .canvas-node-container { background: rgba(42,112,128,0.12); border-color: rgb(42,112,128); }
-.canvas-node[data-color="6"] .canvas-node-container { background: rgba(96,64,160,0.12);  border-color: rgb(96,64,160);  }
+/* ── Node colors (right-click → Color → 1–6) — shadow glow instead of border ── */
+.canvas-node[data-color="1"] .canvas-node-container { background: rgba(139,46,46,0.10);  box-shadow: 0 0 14px rgba(139,46,46,0.5); }
+.canvas-node[data-color="2"] .canvas-node-container { background: rgba(100,100,200,0.10); box-shadow: 0 0 14px rgba(100,100,200,0.5); }
+.canvas-node[data-color="3"] .canvas-node-container { background: rgba(80,140,80,0.10);  box-shadow: 0 0 14px rgba(80,140,80,0.5); }
+.canvas-node[data-color="4"] .canvas-node-container { background: rgba(58,122,74,0.10);  box-shadow: 0 0 14px rgba(58,122,74,0.5); }
+.canvas-node[data-color="5"] .canvas-node-container { background: rgba(42,112,128,0.10); box-shadow: 0 0 14px rgba(42,112,128,0.5); }
+.canvas-node[data-color="6"] .canvas-node-container { background: rgba(96,64,160,0.10);  box-shadow: 0 0 14px rgba(96,64,160,0.5); }
 
 .canvas-node[data-color="1"] .canvas-node-label { color: #e07070; }
-.canvas-node[data-color="2"] .canvas-node-label { color: #e0a458; }
-.canvas-node[data-color="3"] .canvas-node-label { color: #d4c050; }
+.canvas-node[data-color="2"] .canvas-node-label { color: #9090d8; }
+.canvas-node[data-color="3"] .canvas-node-label { color: #70bb85; }
 .canvas-node[data-color="4"] .canvas-node-label { color: #70bb85; }
 .canvas-node[data-color="5"] .canvas-node-label { color: #60b0c0; }
 .canvas-node[data-color="6"] .canvas-node-label { color: #a080d8; }
@@ -297,8 +295,8 @@ hr {
 
 /* File / note embed */
 .canvas-node-file .canvas-node-container {
-  background: #0d0b09;
-  border-color: #3a322a;
+  background: #0d0d0d;
+  border: none;
 }
 .canvas-node-file .canvas-node-label {
   font-size: 0.75em;
@@ -307,8 +305,8 @@ hr {
 
 /* Plain text node */
 .canvas-node-text .canvas-node-container {
-  background: #141210;
-  border-color: #2a241f;
+  background: #111111;
+  border: none;
 }
 .canvas-node-text .canvas-node-content {
   font-family: var(--font-text);
@@ -316,24 +314,22 @@ hr {
   color: var(--text-normal);
 }
 .canvas-node-text:hover .canvas-node-container {
-  border-color: var(--interactive-accent);
+  box-shadow: 0 4px 24px rgba(255,255,255,0.06);
 }
 
 /* Link / URL node */
 .canvas-node-link .canvas-node-container {
-  background: #0e0e0c;
-  border-color: #2a241f;
+  background: #0e0e0e;
+  border: none;
 }
 .canvas-node-link .canvas-node-content,
 .canvas-node-link .canvas-node-content a {
   color: var(--link-color);
 }
 
-/* ── Edges / arrows ──
-   Obsidian SVG uses .canvas-edge-path for the stroke
-   data-color set natively by Obsidian on right-click → Color */
+/* ── Edges / arrows ── */
 .canvas-edge .canvas-edge-path {
-  stroke: #4a3c30;
+  stroke: #444444;
   stroke-width: 2px;
   transition: stroke 0.2s ease;
 }
@@ -343,21 +339,21 @@ hr {
   stroke-width: 2.5px;
 }
 .canvas-edge[data-color="1"] .canvas-edge-path { stroke: rgb(139,46,46);  }
-.canvas-edge[data-color="2"] .canvas-edge-path { stroke: rgb(181,115,47); }
-.canvas-edge[data-color="3"] .canvas-edge-path { stroke: rgb(160,144,32); }
+.canvas-edge[data-color="2"] .canvas-edge-path { stroke: rgb(100,100,200); }
+.canvas-edge[data-color="3"] .canvas-edge-path { stroke: rgb(80,140,80);  }
 .canvas-edge[data-color="4"] .canvas-edge-path { stroke: rgb(58,122,74);  }
 .canvas-edge[data-color="5"] .canvas-edge-path { stroke: rgb(42,112,128); }
 .canvas-edge[data-color="6"] .canvas-edge-path { stroke: rgb(96,64,160);  }
 
 /* Arrow endpoint markers */
-.canvas-edge .canvas-edge-end-marker path { fill: #4a3c30; }
+.canvas-edge .canvas-edge-end-marker path { fill: #444444; }
 .canvas-edge:hover .canvas-edge-end-marker path,
 .canvas-edge.is-selected .canvas-edge-end-marker path { fill: var(--interactive-accent); }
 
-/* ── Group nodes (.canvas-node-group is Obsidian-native) ── */
+/* ── Group nodes ── */
 .canvas-node-group > .canvas-node-container {
-  background: rgba(181,115,47,0.04);
-  border: 1.5px dashed #3a322a;
+  background: rgba(255,255,255,0.02);
+  border: 1.5px dashed #333333;
   border-radius: var(--radius-l);
 }
 .canvas-node-group > .canvas-node-label {
@@ -367,12 +363,13 @@ hr {
   background: rgba(0,0,0,0.5);
   padding: 2px 8px; border-radius: 4px;
 }
-.canvas-node-group[data-color="1"] > .canvas-node-container { background: rgba(139,46,46,0.07);  border-color: rgb(139,46,46);  }
-.canvas-node-group[data-color="2"] > .canvas-node-container { background: rgba(181,115,47,0.07); border-color: rgb(181,115,47); }
-.canvas-node-group[data-color="3"] > .canvas-node-container { background: rgba(160,144,32,0.07); border-color: rgb(160,144,32); }
-.canvas-node-group[data-color="4"] > .canvas-node-container { background: rgba(58,122,74,0.07);  border-color: rgb(58,122,74);  }
-.canvas-node-group[data-color="5"] > .canvas-node-container { background: rgba(42,112,128,0.07); border-color: rgb(42,112,128); }
-.canvas-node-group[data-color="6"] > .canvas-node-container { background: rgba(96,64,160,0.07);  border-color: rgb(96,64,160);  }
+.canvas-node-group[data-color="1"] > .canvas-node-container { background: rgba(139,46,46,0.07);  box-shadow: 0 0 12px rgba(139,46,46,0.3); border-color: transparent; }
+.canvas-node-group[data-color="2"] > .canvas-node-container { background: rgba(100,100,200,0.07); box-shadow: 0 0 12px rgba(100,100,200,0.3); border-color: transparent; }
+.canvas-node-group[data-color="3"] > .canvas-node-container { background: rgba(80,140,80,0.07);  box-shadow: 0 0 12px rgba(80,140,80,0.3); border-color: transparent; }
+.canvas-node-group[data-color="4"] > .canvas-node-container { background: rgba(58,122,74,0.07);  box-shadow: 0 0 12px rgba(58,122,74,0.3); border-color: transparent; }
+.canvas-node-group[data-color="5"] > .canvas-node-container { background: rgba(42,112,128,0.07); box-shadow: 0 0 12px rgba(42,112,128,0.3); border-color: transparent; }
+.canvas-node-group[data-color="6"] > .canvas-node-container { background: rgba(96,64,160,0.07);  box-shadow: 0 0 12px rgba(96,64,160,0.3); border-color: transparent; }
+
 
 /* ── Canvas UI elements ── */
 .canvas-wrapper ::-webkit-scrollbar { width: 8px; }
