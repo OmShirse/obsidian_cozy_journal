@@ -51,14 +51,6 @@
   --radius-s: 6px;
   --radius-m: 8px;
   --radius-l: 12px;
-
-  /* Canvas color palette */
-  --canvas-color-1: 139, 46, 46;
-  --canvas-color-2: 100, 100, 160;
-  --canvas-color-3: 80, 140, 80;
-  --canvas-color-4: 58, 122, 74;
-  --canvas-color-5: 42, 112, 128;
-  --canvas-color-6: 96, 64, 160;
 }
 
 /* ===== Layout ===== */
@@ -276,17 +268,17 @@ hr {
   padding: 3px 6px;
 }
 
-/* ── Node colors (right-click → Color → 1–6) — shadow glow instead of border ── */
-.canvas-node[data-color="1"] .canvas-node-container { background: rgba(139,46,46,0.10);  box-shadow: 0 0 14px rgba(139,46,46,0.5); }
-.canvas-node[data-color="2"] .canvas-node-container { background: rgba(100,100,200,0.10); box-shadow: 0 0 14px rgba(100,100,200,0.5); }
-.canvas-node[data-color="3"] .canvas-node-container { background: rgba(80,140,80,0.10);  box-shadow: 0 0 14px rgba(80,140,80,0.5); }
-.canvas-node[data-color="4"] .canvas-node-container { background: rgba(58,122,74,0.10);  box-shadow: 0 0 14px rgba(58,122,74,0.5); }
-.canvas-node[data-color="5"] .canvas-node-container { background: rgba(42,112,128,0.10); box-shadow: 0 0 14px rgba(42,112,128,0.5); }
-.canvas-node[data-color="6"] .canvas-node-container { background: rgba(96,64,160,0.10);  box-shadow: 0 0 14px rgba(96,64,160,0.5); }
+/* ── Node colors (right-click → Color → 1–6) ── */
+.canvas-node[data-color="1"] .canvas-node-container { background: rgba(var(--canvas-color-1, 139,46,46), 0.22);  box-shadow: 0 0 20px rgba(var(--canvas-color-1, 139,46,46), 0.55); }
+.canvas-node[data-color="2"] .canvas-node-container { background: rgba(var(--canvas-color-2, 181,115,47), 0.22); box-shadow: 0 0 20px rgba(var(--canvas-color-2, 181,115,47), 0.55); }
+.canvas-node[data-color="3"] .canvas-node-container { background: rgba(var(--canvas-color-3, 160,144,32), 0.22); box-shadow: 0 0 20px rgba(var(--canvas-color-3, 160,144,32), 0.55); }
+.canvas-node[data-color="4"] .canvas-node-container { background: rgba(var(--canvas-color-4, 58,122,74), 0.22);  box-shadow: 0 0 20px rgba(var(--canvas-color-4, 58,122,74), 0.55); }
+.canvas-node[data-color="5"] .canvas-node-container { background: rgba(var(--canvas-color-5, 42,112,128), 0.22); box-shadow: 0 0 20px rgba(var(--canvas-color-5, 42,112,128), 0.55); }
+.canvas-node[data-color="6"] .canvas-node-container { background: rgba(var(--canvas-color-6, 96,64,160), 0.22);  box-shadow: 0 0 20px rgba(var(--canvas-color-6, 96,64,160), 0.55); }
 
 .canvas-node[data-color="1"] .canvas-node-label { color: #e07070; }
-.canvas-node[data-color="2"] .canvas-node-label { color: #9090d8; }
-.canvas-node[data-color="3"] .canvas-node-label { color: #70bb85; }
+.canvas-node[data-color="2"] .canvas-node-label { color: #e0a458; }
+.canvas-node[data-color="3"] .canvas-node-label { color: #d4c050; }
 .canvas-node[data-color="4"] .canvas-node-label { color: #70bb85; }
 .canvas-node[data-color="5"] .canvas-node-label { color: #60b0c0; }
 .canvas-node[data-color="6"] .canvas-node-label { color: #a080d8; }
@@ -402,13 +394,10 @@ hr {
   color: var(--text-accent);
 }
 
-/* ── Canvas color picker — restore visible swatches ── */
-.canvas-color-picker-item[data-color="1"] { background-color: rgb(139,46,46)   !important; }
-.canvas-color-picker-item[data-color="2"] { background-color: rgb(100,100,200) !important; }
-.canvas-color-picker-item[data-color="3"] { background-color: rgb(80,140,80)   !important; }
-.canvas-color-picker-item[data-color="4"] { background-color: rgb(58,122,74)   !important; }
-.canvas-color-picker-item[data-color="5"] { background-color: rgb(42,112,128)  !important; }
-.canvas-color-picker-item[data-color="6"] { background-color: rgb(96,64,160)   !important; }
+/* ── Canvas color picker ──
+   Obsidian renders picker swatches using rgb(var(--canvas-color-N)) natively.
+   The --canvas-color-1 through --canvas-color-6 variables defined above
+   are what drives the picker swatch colors — no additional CSS needed here. */
 
 /* ── Canvas image nodes — glow shadow ── */
 .canvas-node-image .canvas-node-container {
