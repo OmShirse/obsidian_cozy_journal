@@ -374,15 +374,15 @@ hr {
 /* ── Canvas UI elements ── */
 .canvas-wrapper ::-webkit-scrollbar { width: 8px; }
 .canvas-wrapper ::-webkit-scrollbar-thumb {
-  background: #2a241f; border-radius: 6px;
+  background: #333333; border-radius: 6px;
 }
 .canvas-wrapper ::-webkit-scrollbar-thumb:hover {
   background: var(--interactive-accent);
 }
 
 .canvas-minimap {
-  background: rgba(13,11,9,0.88);
-  border: 1px solid #2a241f;
+  background: rgba(0,0,0,0.88);
+  border: 1px solid #2a2a2a;
   border-radius: var(--radius-m);
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
@@ -401,3 +401,32 @@ hr {
   background: var(--background-modifier-hover);
   color: var(--text-accent);
 }
+
+/* ── Canvas color picker — restore visible swatches ── */
+.canvas-color-picker-item[data-color="1"] { background-color: rgb(139,46,46)   !important; }
+.canvas-color-picker-item[data-color="2"] { background-color: rgb(100,100,200) !important; }
+.canvas-color-picker-item[data-color="3"] { background-color: rgb(80,140,80)   !important; }
+.canvas-color-picker-item[data-color="4"] { background-color: rgb(58,122,74)   !important; }
+.canvas-color-picker-item[data-color="5"] { background-color: rgb(42,112,128)  !important; }
+.canvas-color-picker-item[data-color="6"] { background-color: rgb(96,64,160)   !important; }
+
+/* ── Canvas image nodes — glow shadow ── */
+.canvas-node-image .canvas-node-container {
+  border: none;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+.canvas-node-image .canvas-node-container:hover {
+  box-shadow: 0 6px 32px rgba(255,255,255,0.08);
+}
+.canvas-node-image.is-selected .canvas-node-container,
+.canvas-node-image.is-focused .canvas-node-container {
+  box-shadow: 0 0 0 2px rgba(150,140,200,0.5), 0 6px 32px rgba(0,0,0,0.6);
+}
+/* Colored image nodes get their glow too */
+.canvas-node-image[data-color="1"] .canvas-node-container { box-shadow: 0 0 18px rgba(139,46,46,0.6); }
+.canvas-node-image[data-color="2"] .canvas-node-container { box-shadow: 0 0 18px rgba(100,100,200,0.6); }
+.canvas-node-image[data-color="3"] .canvas-node-container { box-shadow: 0 0 18px rgba(80,140,80,0.6); }
+.canvas-node-image[data-color="4"] .canvas-node-container { box-shadow: 0 0 18px rgba(58,122,74,0.6); }
+.canvas-node-image[data-color="5"] .canvas-node-container { box-shadow: 0 0 18px rgba(42,112,128,0.6); }
+.canvas-node-image[data-color="6"] .canvas-node-container { box-shadow: 0 0 18px rgba(96,64,160,0.6); }
