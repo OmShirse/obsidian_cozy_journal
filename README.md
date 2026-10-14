@@ -40,27 +40,6 @@ A minimal, dark journaling theme for Obsidian. Pure black everywhere, white text
 3. Place both files inside
 4. In Obsidian: **Settings → Appearance → Themes → select Cozy Journal**
 
----
-
-## 🎨 Banners
-
-Add a colored gradient banner to any note — no plugin required:
-
-```yaml
----
-cssclasses: banner-1
----
-```
-
-| Class | Color |
-|---|---|
-| `banner-1` | Warm amber |
-| `banner-2` | Green |
-| `banner-3` | Purple |
-| `banner-4` | Red |
-
----
-
 ## 🛠 Customization
 
 Edit CSS variables at the top of `theme.css` to tweak the look:
