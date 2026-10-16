@@ -1,41 +1,42 @@
-/* Cozy Journal v1.2.3 — minimal dark theme for Obsidian */
+/* Cozy Journal — minimal theme for Obsidian */
 
-.theme-dark {
-  --background-primary: #000000;
-  --background-primary-alt: #000000;
-  --background-secondary: #000000;
-  --background-secondary-alt: #000000;
-  --background-modifier-border: #2a2a2a;
-  --background-modifier-hover: #1a1a1a;
-  --background-modifier-active-hover: #222222;
-  --background-modifier-form-field: #000000;
-  --background-modifier-form-field-highlighted: #111111;
-  --background-modifier-box-shadow: rgba(0,0,0,0.4);
-  --background-modifier-success: #1a2a1a;
-  --background-modifier-error: #2a1a1a;
+/* ===== Light Theme (Wikipedia-inspired palette) ===== */
+.theme-light {
+  --background-primary: #ffffff;
+  --background-primary-alt: #f8f9fa;
+  --background-secondary: #f8f9fa;
+  --background-secondary-alt: #fafafa;
+  --background-modifier-border: #a2a9b1;
+  --background-modifier-hover: #f0f2f5;
+  --background-modifier-active-hover: #eaf3ff;
+  --background-modifier-form-field: #ffffff;
+  --background-modifier-form-field-highlighted: #f8f9fa;
+  --background-modifier-box-shadow: rgba(0,0,0,0.1);
+  --background-modifier-success: #eafbe7;
+  --background-modifier-error: #fbeae7;
 
-  --modal-background: #000000;
-  --prompt-background: #000000;
-  --titlebar-background: #000000;
-  --titlebar-background-focused: #000000;
-  --ribbon-background: #000000;
-  --ribbon-background-collapsed: #000000;
-  --sidebar-left-background: #000000;
-  --sidebar-right-background: #000000;
+  --modal-background: #ffffff;
+  --prompt-background: #ffffff;
+  --titlebar-background: #f8f9fa;
+  --titlebar-background-focused: #f8f9fa;
+  --ribbon-background: #ffffff;
+  --ribbon-background-collapsed: #ffffff;
+  --sidebar-left-background: #ffffff;
+  --sidebar-right-background: #ffffff;
 
-  --text-normal: #ffffff;
-  --text-muted: #888888;
-  --text-faint: #555555;
-  --text-accent: #aaaaaa;
-  --text-accent-hover: #cccccc;
-  --text-error: #d9695f;
-  --text-selection: #2a2a3a;
+  --text-normal: #202122;
+  --text-muted: #54595d;
+  --text-faint: #72777d;
+  --text-accent: #3366cc;
+  --text-accent-hover: #0645ad;
+  --text-error: #ba0000;
+  --text-selection: #c8daf8;
   --text-on-accent: #ffffff;
 
-  --interactive-normal: #1a1a1a;
-  --interactive-hover: #222222;
-  --interactive-accent: #2a2a38;
-  --interactive-accent-hover: #353545;
+  --interactive-normal: #f8f9fa;
+  --interactive-hover: #f0f2f5;
+  --interactive-accent: #3366cc;
+  --interactive-accent-hover: #0645ad;
 
   --h1-color: var(--text-normal);
   --h2-color: var(--text-normal);
@@ -47,15 +48,15 @@
   --font-text: "Georgia", "Iowan Old Style", serif;
   --font-monospace: "JetBrains Mono", "Fira Code", monospace;
 
-  --bold-color: #c8b8f0;
-  --italic-color: #b0a0d8;
-  --link-color: #ffffff;
-  --link-color-hover: #ffffff;
-  --link-unresolved-color: #685880;
+  --bold-color: #202122;
+  --italic-color: #3a3d40;
+  --link-color: #3366cc;
+  --link-color-hover: #0645ad;
+  --link-unresolved-color: #ba0000;
 
-  --blockquote-border-color: var(--interactive-accent);
-  --code-background: #111111;
-  --code-normal: #cccccc;
+  --blockquote-border-color: #3366cc;
+  --code-background: #f8f9fa;
+  --code-normal: #202122;
 
   --tab-radius: 8px 8px 0 0;
   --radius-s: 6px;
@@ -63,7 +64,71 @@
   --radius-l: 12px;
 }
 
-/* ===== Force pure black on all UI surfaces ===== */
+/* ===== Dark Theme (Wikipedia Dark Palette on Pure Black) ===== */
+.theme-dark {
+  --background-primary: #000000;
+  --background-primary-alt: #0a0b0d;
+  --background-secondary: #000000;
+  --background-secondary-alt: #121417;
+  --background-modifier-border: #2c3036;
+  --background-modifier-hover: #16181c;
+  --background-modifier-active-hover: #1c2430;
+  --background-modifier-form-field: #0d0f12;
+  --background-modifier-form-field-highlighted: #14171c;
+  --background-modifier-box-shadow: rgba(0,0,0,0.6);
+  --background-modifier-success: #1a2a1a;
+  --background-modifier-error: #2a1a1a;
+
+  --modal-background: #0e1013;
+  --prompt-background: #0e1013;
+  --titlebar-background: #000000;
+  --titlebar-background-focused: #000000;
+  --ribbon-background: #000000;
+  --ribbon-background-collapsed: #000000;
+  --sidebar-left-background: #000000;
+  --sidebar-right-background: #000000;
+
+  --text-normal: #eaecf0;
+  --text-muted: #9aa0a7;
+  --text-faint: #72777d;
+  --text-accent: #81a8f8;
+  --text-accent-hover: #a7c4fb;
+  --text-error: #ff6e6e;
+  --text-selection: #1c3557;
+  --text-on-accent: #ffffff;
+
+  --interactive-normal: #14161a;
+  --interactive-hover: #1c2026;
+  --interactive-accent: #21426e;
+  --interactive-accent-hover: #294c7a;
+
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-normal);
+
+  --font-text: "Georgia", "Iowan Old Style", serif;
+  --font-monospace: "JetBrains Mono", "Fira Code", monospace;
+
+  --bold-color: #ffffff;
+  --italic-color: #c8ccd1;
+  --link-color: #81a8f8;
+  --link-color-hover: #a7c4fb;
+  --link-unresolved-color: #ff6e6e;
+
+  --blockquote-border-color: #21426e;
+  --code-background: #101215;
+  --code-normal: #eaecf0;
+
+  --tab-radius: 8px 8px 0 0;
+  --radius-s: 6px;
+  --radius-m: 8px;
+  --radius-l: 12px;
+}
+
+/* ===== Pure black workspace surfaces ===== */
 body.theme-dark .app-container,
 body.theme-dark .workspace,
 body.theme-dark .workspace-ribbon,
@@ -74,26 +139,31 @@ body.theme-dark .workspace-leaf,
 body.theme-dark .workspace-leaf-content,
 body.theme-dark .workspace-tab-header-container,
 body.theme-dark .workspace-tab-header-container-inner,
-body.theme-dark .modal-container,
-body.theme-dark .modal-bg,
+body.theme-dark .titlebar,
+body.theme-dark .titlebar-text-win-wordmark {
+  background: #000000;
+}
+
+/* Floating UI & form elements — visible with contrast & borders */
 body.theme-dark .modal,
 body.theme-dark .prompt,
 body.theme-dark .menu,
 body.theme-dark .popover,
 body.theme-dark .suggestion-container,
 body.theme-dark .dropdown,
-body.theme-dark .select-dropdown,
-body.theme-dark .vertical-tab-header,
-body.theme-dark .vertical-tab-content,
-body.theme-dark .community-modal-details,
-body.theme-dark .mod-settings .vertical-tab-content-container,
-body.theme-dark .titlebar,
-body.theme-dark .titlebar-text-win-wordmark,
+body.theme-dark .select-dropdown {
+  background: #0e1013;
+  border: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
+}
+
 body.theme-dark input[type="text"],
 body.theme-dark input[type="search"],
 body.theme-dark textarea,
 body.theme-dark select {
-  background: #000000;
+  background: var(--background-modifier-form-field);
+  border: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
 }
 
 /* ===== Layout ===== */
@@ -170,13 +240,13 @@ a.internal-link,
 a.external-link,
 .markdown-preview-view a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--link-color);
 }
 a.internal-link:hover,
 a.external-link:hover,
 .markdown-preview-view a:hover {
   text-decoration: underline;
-  color: #ffffff;
+  color: var(--link-color-hover);
 }
 
 /* ===== Buttons ===== */
@@ -232,23 +302,37 @@ button, .clickable-icon {
 }
 
 /* Canvas background */
-.canvas-background {
+.theme-dark .canvas-background {
   background-color: #000000;
   background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px);
   background-size: 28px 28px;
 }
+.theme-light .canvas-background {
+  background-color: #ffffff;
+  background-image: radial-gradient(circle, #e0e0e0 1px, transparent 1px);
+  background-size: 28px 28px;
+}
 
-/* Force canvas node containers to pure black */
-.canvas-node .canvas-node-container {
+/* Force canvas node containers to theme background */
+.theme-dark .canvas-node .canvas-node-container {
   background: #000000;
+}
+.theme-light .canvas-node .canvas-node-container {
+  background: #ffffff;
 }
 
 /* Canvas minimap */
-.canvas-minimap {
+.theme-dark .canvas-minimap {
   background: rgba(0,0,0,0.88);
   border: 1px solid #2a2a2a;
   border-radius: var(--radius-m);
   box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.theme-light .canvas-minimap {
+  background: rgba(255,255,255,0.88);
+  border: 1px solid #a2a9b1;
+  border-radius: var(--radius-m);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 /* Canvas controls */
