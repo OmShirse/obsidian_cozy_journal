@@ -1,6 +1,4 @@
 /* Cozy Journal — minimal theme for Obsidian */
-
-/* ===== Light Theme (Wikipedia-inspired palette) ===== */
 .theme-light {
   --background-primary: #ffffff;
   --background-primary-alt: #f8f9fa;
@@ -64,7 +62,7 @@
   --radius-l: 12px;
 }
 
-/* ===== Dark Theme (Wikipedia Dark Palette on Pure Black) ===== */
+/* ===== Dark Theme ===== */
 .theme-dark {
   --background-primary: #000000;
   --background-primary-alt: #0a0b0d;
@@ -281,10 +279,7 @@ button, .clickable-icon {
 .markdown-preview-view li { text-align: justify; }
 .markdown-source-view.mod-cm6 .cm-content { text-align: justify; }
 
-/* ══════════════════════════════════════════════════════
-   CANVAS
-   ══════════════════════════════════════════════════════ */
-
+/* CANVAS */
 /* Reset text alignment inside canvas nodes to default (left) */
 .canvas-node-content p,
 .canvas-node-content li,
